@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>나의 적정 운동 강도 계산법은?</title>
+
+	
+
+
+	<style type="text/css">
+		@font-face { font-family: 'NotoSerifKR'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff'); font-weight: normal; font-style: normal; } 
+
+		h1{font-family: 'NotoSerifKR';margin-top: 30px;font-size: 30px;font-color:pink;margin: auto;display: block;margin-left:500px;}
+
+		p{font-family: 'NotoSerifKR';margin-top: 60px;font-size: 12px;font-color:gray;margin: auto;display: block;text-align: center;}
+
+		#myage{font-family: 'NotoSerifKR', sans-serif;
+			font-size: 17px;
+			font-style: bold;
+			padding: 10px;
+			margin: auto;
+			margin-bottom: 10px;
+			margin-top: 30px;
+			background-color:lightgray;
+			border: none;
+			box-shadow: 0px 0px 5px; inset;
+			border-radius: 4px;}
+	</style>
+</head>
+<body>
+	<div id="monitor">
+
+	<img src="exercise" width="400px;">
+	<h1>
+		당신의 적정 운동 칼로리는 얼마나 될까요?
+	</h1>
+	</br>
+	<p>
+		운동을 하는데 있어서 가장 중요한 것은 자신의 운동강도에 맞게 하는 방법입니다. </br> 이 결과는 자신의 최대 심장 박동수의 60% 중강도 운동에 해당됩니다.
+	</p>
+	<input type="text" placeholder="나이를 입력하세요!" id="myage" style="margin-left: 660px;text-align: center;background-color: pink;">  살
+	<br><br><br>
+	<button id="but" style="font-family: 'NotoSerifKR';margin-left: 700px;">적정운동강도계산</button>
+	<br><br><br>
+	<div id="output" style="font-family: 'NotoSerifKR';width: 600px; height: 100px; background: pink;color: gray;text-align: center;line-height: 100px;box-shadow: 0px 0px 5px; inset;margin: auto;">몇 kcal일까요?
+	<br>
+	<input type="button" onclick="alert('건강한 하루 되세요!')" value="Click Me!" style="font-family: 'NotoSerifKR';">
+</div>
+
+	<script type="text/javascript">
+		
+		but.onclick = function(){
+			//조스바를사와라
+			var standardage = (220 - myage.value)* 0.6;
+			var finalOutput = "당신의 나이는 " + myage.value + "살이고 적정 운동 강도 칼로리는 " + standardage + "kcal입니다.";
+
+			output.innerHTML = finalOutput;
+		}
+
+	</script>
+</body>
+</html>
